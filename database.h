@@ -15,7 +15,7 @@
 using namespace std;
 
 
-struct StudentRec{
+struct StudentRec {
 
     string FirstName;
     string LastName;
@@ -26,9 +26,9 @@ struct StudentRec{
 
 };
 
-class StudentDatabase{
+class StudentDatabase {
 private:
-    struct Node{
+    struct Node {
         StudentRec data;
         Node* Next;
     };
@@ -56,7 +56,7 @@ public:
     unsigned int size() const;
 
     //Add record (detect duplicate ID, make sure still sorted after adding, update if existing ID)
-    void addRecord(const StudentRec &r);
+    void addRecord(const StudentRec& r);
 
     //Remove record and return t/f for success
     bool removeRecord(string ID);
